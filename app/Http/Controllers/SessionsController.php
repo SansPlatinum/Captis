@@ -23,12 +23,12 @@ class SessionsController extends Controller
         
         if(auth()->attempt($attributes)){
             session()->regenerate();
-            return redirect('/')->with('passed', 'hey broski, welcome back to teh site, XD');
+            return redirect('/')->with('passed', 'Welcome Back');
         }
 
         return back()
         ->withInput()
-        ->withErrors(['username' => 'Hey pardner, Looks like that\'s not a set of good old valid credentials']);
+        ->withErrors(['username' => 'Invalid Credentials, Please Try Again']);
 
     }
 }
