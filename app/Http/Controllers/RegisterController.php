@@ -23,6 +23,8 @@ class RegisterController extends Controller
             'username' => ['required', 'max:20', 'min:3', 'unique:users,username'],
             'email' => ['required', 'max:255','email', 'unique:users,email'],
             'password' => ['required', 'max:255', 'min:7'],
+            'organisation' => ['required', 'max:255'],
+            'orgtype' => [],
         ]);
     
 

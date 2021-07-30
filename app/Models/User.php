@@ -6,10 +6,20 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Billable;
+
+
+    // This is supposed to keep stripe and the db/model in sync
+    // protected static function booted()
+    // {
+    //     static::updated(queueable(function ($customer) {
+    //         $customer->syncStripeCustomerDetails();
+    //     }));
+    // }
 
     /**
      * The attributes that are not mass assignable.
@@ -40,7 +50,7 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
-    public function userType(){
+    public function user_type(){
         return $this->belongsTo(UserType::class);
     }
     public function organisation(){

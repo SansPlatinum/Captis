@@ -38,6 +38,24 @@
                     @enderror
                     <br>
 
+
+                    <label for='Organisation' class = 'text-gray-700'> Organisation Name: </label><br>
+                    <input type = 'text' name = 'organisation' id = 'organisation' placeholder = 'Amongus Incorporated' required class = 'p-2 px-6 border-2 border-gray-500'><br>
+                    @error('organisation')
+                        <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
+                    @enderror
+                    <br>
+
+                    <label for='orgrype' class = 'text-gray-700'> Organisation Type: </label><br>
+                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Garage' required class = 'p-2 px-6 border-2 border-gray-500'>   Garage<br>
+                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Rental' required class = 'p-2 px-6 border-2 border-gray-500'>   Rental<br>
+                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Other' required class = 'p-2 px-6 border-2 border-gray-500'>   Other<br>
+                    @error('orgtype')
+                        <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
+                    @enderror
+                    <br>
+
+
                     <!-- Set up this input to validate organisations? -->
 
                     <!-- <label for='code' class = 'text-gray-700'> Organisation Code: </label><br>

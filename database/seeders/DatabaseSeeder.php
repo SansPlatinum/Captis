@@ -74,10 +74,10 @@ class DatabaseSeeder extends Seeder
 
         //user types
         $t2 = UserType::factory()->create([
-            'user_type' => 'Organisation User'
+            'user_type' => 'Organisation Admin'
         ]);
         $t3 = UserType::factory()->create([
-            'user_type' => 'Organisation Customer'
+            'user_type' => 'Organisation User'
         ]);
 
 

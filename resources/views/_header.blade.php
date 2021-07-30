@@ -21,7 +21,7 @@
                     <a href = '#'>Your Dashboard</a>
                     <a href = '#'>Notifications</a>
                     <a href = '#'>Your Company Information</a>
-                    <a href = '#'>Bookings</a>
+                    <a href = '/subscribechoice'>Subscribe</a>
                 </div>
             </div>
             <form method = 'POST' action='/logout' >

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\SubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\SessionsController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
@@ -25,3 +26,10 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 Route::get('/login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('/sessions', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth');
+
+Route::get('/subscribechoice', [SubscribeController::class, 'showoptions'])->middleware('orgadmin');
+Route::get('/subscribe', [SubscribeController::class, 'create']);
+
+Route::get('/billing-portal', function (Request $request) {
+    return auth()->user()->redirectToBillingPortal(route('home'));
+});
