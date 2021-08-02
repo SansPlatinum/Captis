@@ -13,22 +13,20 @@
     <div class = 'pb-5'>
         <h3>Subscription One</h3>
         <p>Lorem Ipsum Dolor sit amet</p>
-        <form method = 'get' action = '/billing-portal'>
-            <input type = 'submit' value = 'start today'>
-        </form>
+
+        @auth
+            <form method = 'get' action = '/subscriptionone'>
+                <input type = 'submit' value = 'start today'>
+            </form>
+        @endauth
+
+        @guest
+            <form method = 'get' action = '/login'>
+                <input type = 'submit' value = 'Log In to continue'>
+            </form>
+        @endguest
+
     </div>
-
-    <div class = 'pb-5'>
-        <h3>Subscription Two</h3>
-        <p>Lorem Ipsum Dolor sit amet</p>
-
-    </div>
-
-    <div class = 'pb-5'>
-        <h3>Subscription Three</h3>
-        <p>Lorem Ipsum Dolor sit amet</p>
-    </div>
-
 </div>
 
 

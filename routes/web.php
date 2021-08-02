@@ -27,8 +27,8 @@ Route::get('/login', [SessionsController::class, 'create'])->middleware('guest')
 Route::post('/sessions', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
-Route::get('/subscribechoice', [SubscribeController::class, 'showoptions'])->middleware('orgadmin');
-Route::get('/subscribe', [SubscribeController::class, 'create']);
+Route::get('/subscribe', [SubscribeController::class, 'showoptions']);
+Route::get('/subscriptionone', [SubscribeController::class, 'create'])->middleware('orgadmin');
 
 Route::get('/billing-portal', function (Request $request) {
     return auth()->user()->redirectToBillingPortal(route('home'));

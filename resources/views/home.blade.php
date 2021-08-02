@@ -27,4 +27,8 @@
             Praesent mauris ipsum, tristique in ultricies a, bibendum id nibh. Maecenas elit nisi, porta nec magna id, consectetur semper sapien. Duis sollicitudin volutpat enim non lobortis. Fusce id nisl a felis consequat dapibus sed ut ligula. Proin hendrerit eros eu magna lobortis vulputate. Mauris non nulla vel ex dictum molestie. In et varius nisi, eu ornare lorem. Sed rhoncus risus sed nulla rhoncus ultricies. Cras urna erat, suscipit ac sapien sed, rhoncus porta ipsum. Pellentesque mollis bibendum nunc eget volutpat. Proin scelerisque orci vel mauris iaculis ullamcorper. Aliquam et condimentum eros, nec vestibulum ligula. Donec consectetur interdum nisl sed egestas. Vivamus vestibulum tristique feugiat.
         </p>
     </div>
+    <div class = 'container mx-auto mt-6 border-4 border-gray-300 border rounded-lg px-10 py-3' >
+        <h1 class = 'text-center font-semibold font-sans text-3xl'> <a href = '/subscribe'>Subscribe</a></h1>
+    </div>
+
 @endsection

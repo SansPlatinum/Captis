@@ -39,18 +39,32 @@
                     <br>
 
 
-                    <label for='Organisation' class = 'text-gray-700'> Organisation Name: </label><br>
-                    <input type = 'text' name = 'organisation' id = 'organisation' placeholder = 'Amongus Incorporated' required class = 'p-2 px-6 border-2 border-gray-500'><br>
-                    @error('organisation')
+                    <label for='organisation_name' class = 'text-gray-700'> Organisation Name: </label><br>
+                    <input type = 'text' name = 'organisation_name' value = "{{old('organisation_name')}}" id = 'organisation_name' placeholder = 'Amongus Incorporated' required class = 'p-2 px-6 border-2 border-gray-500'><br>
+                    @error('organisation_name')
                         <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
                     @enderror
                     <br>
 
-                    <label for='orgrype' class = 'text-gray-700'> Organisation Type: </label><br>
-                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Garage' required class = 'p-2 px-6 border-2 border-gray-500'>   Garage<br>
-                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Rental' required class = 'p-2 px-6 border-2 border-gray-500'>   Rental<br>
-                    <input type = 'radio' name = 'orgtype' id = 'orgtype' value = 'Other' required class = 'p-2 px-6 border-2 border-gray-500'>   Other<br>
-                    @error('orgtype')
+                    <label for='address' class = 'text-gray-700'> Organisation Address: </label><br>
+                    <input type = 'text' name = 'address' id = 'address' value = "{{old('address')}}" placeholder = '3 Sussy Lane, Mogustown' required class = 'p-2 px-6 border-2 border-gray-500'><br>
+                    @error('address')
+                        <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
+                    @enderror
+                    <br>
+
+                    <label for='postcode' class = 'text-gray-700'> Organisation Postcode: </label><br>
+                    <input type = 'text' name = 'postcode' id = 'postcode' placeholder = 'AM09 GU5' value = "{{old('postcode')}}" required class = 'p-2 px-6 border-2 border-gray-500'><br>
+                    @error('postcode')
+                        <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
+                    @enderror
+                    <br>
+
+                    <label for='organisation_type' class = 'text-gray-700'> Organisation Type: </label><br>
+                    <input type = 'radio' name = 'organisation_type_id' id = 'organisation_type_id' value = '3' checked class = 'p-2 px-6 border-2 border-gray-500'>   Garage<br>
+                    <input type = 'radio' name = 'organisation_type' id = 'organisation_type_id' value = '4'  class = 'p-2 px-6 border-2 border-gray-500'>   Rental<br>
+                    <input type = 'radio' name = 'organisation_type' id = 'organisation_type_id' value = '5'  class = 'p-2 px-6 border-2 border-gray-500'>   Other<br>
+                    @error('organisation_type_id')
                         <p class = 'text-red-500 text-xs mt-1'>{{$message}}</p>
                     @enderror
                     <br>

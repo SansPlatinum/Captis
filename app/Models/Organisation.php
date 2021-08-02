@@ -11,7 +11,7 @@ class Organisation extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id','organisation_type_id'];
+    protected $guarded = ['id'];
 
     public function organisationType(){
         return $this->belongsTo(OrganisationType::class);

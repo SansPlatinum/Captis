@@ -17,6 +17,7 @@ class Organisations extends Migration
             $table->id();
             $table->string('organisation_name');
             $table->string('address');
+            $table->string('postcode')->default('Null');
             $table->foreignId('organisation_type_id');
             $table->rememberToken();
             $table->timestamps(); 

@@ -25,7 +25,7 @@ class OrganisationFactory extends Factory
     {
         return [
             'organisation_name' => $this->faker->word(),
-            'address' => $this->faker->unique()->safeEmail(),
+            'address' => $this->faker->unique()->streetAddress(),
             'remember_token' => Str::random(10),
             'organisation_type_id' => OrganisationType::factory() 
         ];
