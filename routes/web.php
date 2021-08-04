@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\SubscribeController;
@@ -32,4 +33,10 @@ Route::get('/subscriptionone', [SubscribeController::class, 'create'])->middlewa
 
 Route::get('/billing-portal', function (Request $request) {
     return auth()->user()->redirectToBillingPortal(route('home'));
+});
+
+Route::post('/createsubscription', function (Request $request){
+
+    dd($request->all());
+
 });
